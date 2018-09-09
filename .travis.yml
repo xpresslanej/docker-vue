@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+  before_install:
+  - docker build -t xpresslanej/docker-vue -f Dockerfile.dev .
+
+script:
+  - docker run xpresslanej/docker-vue npm run test:unit
