@@ -1,5 +1,8 @@
 # docker-vue
 
+## Travis CI Build Status
+[![Build Status](https://travis-ci.org/xpresslanej/docker-vue.svg?branch=master)](https://travis-ci.org/xpresslanej/docker-vue)
+
 ## Project setup
 ```
 npm install
