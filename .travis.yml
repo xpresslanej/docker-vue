@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run xpresslanej/docker-vue npm run test:unit
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-vue"
+  env: "DockerVue-env"
+  bucket_name: "elasticbeanstalk-us-east-1-796090028278"
+  bucket_path: "docker-vue"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
